@@ -17,17 +17,10 @@ class TicketsController < ApplicationController
 
 	def create
 		@ticket = Ticket.create(ticket_params)
-
-		respond_to do |format|
 			if @ticket.save
-				TicketResponseMailer.response(@ticket).deliver_now
-				format.html { redirect_to root_path }
-				format.json { render :show, status: :created, location: @ticket }
-			else
-				format.html { render :new }
-				format.json { render json: @ticket.errors, status: :unprocessable_entity }
+				redirect_to root_path
 			end
-		end		
+
 	end
 
 	def destroy
@@ -42,8 +35,15 @@ class TicketsController < ApplicationController
 
 	def update
 		@ticket = Ticket.find(params[:id])
-		if @ticket.update(ticket_params)
-			redirect_to ticket_path
+		respond_to do |format|
+			if @ticket.update(ticket_params)
+				TicketResponseMailer.response(@ticket).deliver_now
+				format.html { redirect_to root_path }
+				format.json { render :show, status: :created, location: @ticket }
+			else
+				format.html { render :new }
+				format.json { render json: @ticket.errors, status: :unprocessable_entity }
+			end
 		end
 	end
 

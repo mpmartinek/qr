@@ -28,9 +28,10 @@ Contact info: <u><%= @ticket.contact %></u>
 <%= image_tag @ticket.image.url(:large) %><br><br>
 <%= link_to 'Original Size',@ticket.image.url(:original) %>
 <hr>
-<%= link_to '<button class="btn btn-warning">Edit</button>'.html_safe, edit_ticket_path %>
 
 <%= link_to '<button class="btn btn-info">Back to  Unresolved Tickets</button>'.html_safe, tickets_path %>
+
+<%= link_to '<button class="btn btn-warning">Respond</button>'.html_safe, edit_ticket_path %>
 
 <%= link_to '<button class="btn btn-danger">Delete</button>'.html_safe, ticket_path(), 
 method: :delete, data:{confirm:'Are you sure?'} %>

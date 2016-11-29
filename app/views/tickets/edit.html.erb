@@ -19,16 +19,16 @@
 
 <br><br><br><br>
 
-<h2>Edit Ticket</h2>
+<h2>Send Response</h2>
 <hr>
 
 <%= form_for @ticket do |f| %>
-<p><%= f.label 'User ID: ' %> <%= f.text_field :user_id %></p>
-<p><%= f.label 'Contact:' %> <%= f.text_field :contact %></p>
-<p><%= f.label 'Comment: ' %> <%= f.text_field :comment %></p>
-<p><%= f.label 'Admin Comment: '%> <%= f.text_field :admin_comment %></p>
-<p><%= f.label 'Resolved: ' %> <%= f.check_box :resolved %>
-<p><%= f.submit 'Commit' %></p>
+<p><%= f.label 'Recipient: ' %> <%= f.text_field :contact %></p>
+<p><%= f.label 'Content: ' %> <%= f.text_field :admin_comment %></p>
+<p><%= f.label 'Resolved: ' %> <%= f.check_box :resolved %></p>
+<%= f.submit 'Send Repsonse via Email' %>
+
+
 
 <hr>
 

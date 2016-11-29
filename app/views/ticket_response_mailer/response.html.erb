@@ -1,6 +1,7 @@
-<h1><%= @ticket.user_id %></h1>
+<h1>Hi User: <%= @ticket.user_id %></h1>
+<p>This if a link to your ticket: <%= link_to 'Ticket', @ticket %>
+<br>
+<%= @ticket.admin_comment %>
 
-<%= link_to 'Ticket', @ticket %>
-<p>
-  Hi There
+All the best from the QuickResponse Team 
 </p>
