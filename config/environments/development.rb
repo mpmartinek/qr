@@ -60,7 +60,7 @@ Rails.application.configure do
     :user_name      => ENV['info@iammarek.com'],
     :password       => ENV['letmemail'],
     :domain         => 'fierce-hamlet-14483.herokuapp.com',
-    :authentication => :login
+    :authentication => :plain
   }
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end
