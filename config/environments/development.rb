@@ -56,11 +56,11 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :port           => 290,
-    :address        => 'smtp. iammarek.com',
+    :address        => 'smtp.iammarek.com',
     :user_name      => ENV['info@iammarek.com'],
     :password       => ENV['letmemail'],
-    :domain         => 'iammarek.com',
-    :authentication => :plain,
+    :domain         => 'fierce-hamlet-14483.herokuapp.com',
+    :authentication => :login
   }
-  config.action_mailer.default_url_options = { :host => '127.0.0.1' }
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end
