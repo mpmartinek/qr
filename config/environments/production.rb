@@ -86,7 +86,7 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :port           => 290,
-    :address        => 'localhost',
+    :address        => 'smtp.iammarek.com',
     :user_name      => ENV['info@iammarek.com'],
     :password       => ENV['letmemail'],
     :domain         => 'iammarek.com',
