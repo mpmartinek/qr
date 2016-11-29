@@ -88,6 +88,7 @@ config.action_mailer.delivery_method = :smtp
     :address        => 'smtp. iammarek.com',
     :user_name      => ENV['info@iammarek.com'],
     :password       => ENV['letmemail'],
+    :domain         => 'iammarek.com',
     :authentication => :plain,
   }
   config.action_mailer.default_url_options = { :host => 'https://fierce-hamlet-14483.herokuapp.com' }

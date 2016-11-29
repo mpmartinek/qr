@@ -59,6 +59,7 @@ Rails.application.configure do
     :address        => 'smtp. iammarek.com',
     :user_name      => ENV['info@iammarek.com'],
     :password       => ENV['letmemail'],
+    :domain         => 'iammarek.com',
     :authentication => :plain,
   }
   config.action_mailer.default_url_options = { :host => '127.0.0.1' }
