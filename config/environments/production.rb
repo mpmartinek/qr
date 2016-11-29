@@ -82,17 +82,17 @@ Rails.application.configure do
   end
 
 
-config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :port           => 290,
     :address        => 'smtp.iammarek.com',
     :user_name      => ENV['info@iammarek.com'],
     :password       => ENV['letmemail'],
-    :domain         => 'iammarek.com',
-    :authentication => :plain,
+    :domain         => 'fierce-hamlet-14483.herokuapp.com',
+    :authentication => :plain
   }
-  config.action_mailer.default_url_options = { :host => 'https://fierce-hamlet-14483.herokuapp.com' }
-
+  config.action_mailer.default_url_options = { :host => 'fierce-hamlet-14483.herokuapp.com' }
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
