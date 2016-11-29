@@ -1,7 +1,17 @@
-<h1>Hi User: <%= @ticket.user_id %></h1>
-<p>This if a link to your ticket: <%= link_to 'Ticket', @ticket %>
-<br>
+<h4>Hi User: <%= @ticket.user_id %></h4>
+<p>I'm with the QuickResponse team, and I will do my best to hlep you with the issues you are facing.
+<br><br>
+This is a link to your ticket: <%= link_to 'Link', @ticket %>
+<br><br>
+Date and time submitted: <%=@ticket.created_at.strftime("%b %d. %Y, %l:%M:%S")%>
+<br><br><br>
+As a solution, please consider the following:
+<br><br>
 <%= @ticket.admin_comment %>
-
-All the best from the QuickResponse Team 
+<br><br><br>
+Thank you for using QuickReponse
+<br><br>
+Best,
+<br>
+QuickResponse Team 
 </p>

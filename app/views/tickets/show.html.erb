@@ -9,7 +9,10 @@
 <div class='container-fluid'>
 
 <ul class='nav navbar-nav'>
-	<h4 style='color:white;'>Admin Access</h4>		
+	<h4 style='color:white;'>QuickResponse || Admin Access || <%if@ticket.resolved==false%><%=link_to 'Unresolved Tickets', tickets_path%><%end%><%if@ticket.resolved==true	%><%=link_to 'Resolved Tickets', tickets_resolved_path%><%end%></h4>
+
+
+
 </ul>
 </div>
 </nav>
@@ -18,20 +21,20 @@
 	<div class='container text-center'>
 
 <br><br><br><br>
-<i><h2>Ticket # <%= @ticket.id %></h2></i>
+
 <h2>User ID: <%= @ticket.user_id %></h2>
 <p>
 <hr>
-Contact info: <u><%= @ticket.contact %></u>
+Contact info: <u><%= mail_to @ticket.contact %></u>
 <hr>Comment: <%= @ticket.comment %>
 <hr>
 <%= image_tag @ticket.image.url(:large) %><br><br>
 <%= link_to 'Original Size',@ticket.image.url(:original) %>
 <hr>
 
-<%= link_to '<button class="btn btn-info">Back to  Unresolved Tickets</button>'.html_safe, tickets_path %>
+<%= link_to '<button class="btn btn-primary">Back</button>'.html_safe, tickets_path %>
 
-<%= link_to '<button class="btn btn-warning">Respond</button>'.html_safe, edit_ticket_path %>
+<%= link_to '<button class="btn btn-success">Respond</button>'.html_safe, edit_ticket_path %>
 
 <%= link_to '<button class="btn btn-danger">Delete</button>'.html_safe, ticket_path(), 
 method: :delete, data:{confirm:'Are you sure?'} %>

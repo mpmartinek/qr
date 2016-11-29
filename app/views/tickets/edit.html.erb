@@ -1,7 +1,12 @@
 <%= stylesheet_link_tag "main_style.css" %>
 <%= stylesheet_link_tag "theme.css" %>
 
-
+<style type="text/css">
+  #qr-form textarea.standard {
+  height: 100px;
+  width: 100px;
+  }
+</style>
 
 <body>
     
@@ -22,9 +27,9 @@
 <h2>Send Response</h2>
 <hr>
 
-<%= form_for @ticket do |f| %>
-<p><%= f.label 'Recipient: ' %> <%= f.text_field :contact %></p>
-<p><%= f.label 'Content: ' %> <%= f.text_field :admin_comment %></p>
+<%= 	form_for @ticket do |f| %>
+<p style='text-align: center'><%= f.label 'Recipient: ' %> <%= f.email_field :contact, size:25, :required => true	 %></p>
+<p><%= f.label 'Content: ' %></p> <p><%= f.text_area :admin_comment, cols: 100, rows: 15, :required => true %></p>
 <p><%= f.label 'Resolved: ' %> <%= f.check_box :resolved %></p>
 <%= f.submit 'Send Repsonse via Email' %>
 
