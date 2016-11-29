@@ -1,0 +1,24 @@
+Increase size of text boxes for comments
+
+figure out an elegant way to send email/reach back to customer
+
+
+
+create respond button on ticket view
+open page with prefilled recipient box
+prefilled subject: ticket number - date/time submitted - user id
+
+body box - prewritten warm words - space to write response
+
+
+send button
+
+
+
+
+
+
+
+------------------------------
+
+backup, seave response to DB and copy to outlook

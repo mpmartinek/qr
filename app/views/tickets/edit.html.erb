@@ -1,0 +1,44 @@
+<%= stylesheet_link_tag "main_style.css" %>
+<%= stylesheet_link_tag "theme.css" %>
+
+
+
+<body>
+    
+<nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+<div class='container-fluid'>
+
+<ul class='nav navbar-nav'>
+    <h4 style='color:white;'>Admin Access</h4>      
+</ul>
+</div>
+</nav>
+<div id="container">
+<div class='jumbtron'>
+    <div class='container text-center'>
+
+<br><br><br><br>
+
+<h2>Edit Ticket</h2>
+<hr>
+
+<%= form_for @ticket do |f| %>
+<p><%= f.label 'User ID: ' %> <%= f.text_field :user_id %></p>
+<p><%= f.label 'Contact:' %> <%= f.text_field :contact %></p>
+<p><%= f.label 'Comment: ' %> <%= f.text_field :comment %></p>
+<p><%= f.label 'Admin Comment: '%> <%= f.text_field :admin_comment %></p>
+<p><%= f.label 'Resolved: ' %> <%= f.check_box :resolved %>
+<p><%= f.submit 'Commit' %></p>
+
+<hr>
+
+
+<% end %>
+
+</div></div>
+
+</body>
+
+
+
+

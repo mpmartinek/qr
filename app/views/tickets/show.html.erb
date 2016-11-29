@@ -1,0 +1,44 @@
+<%= stylesheet_link_tag "main_style.css" %>
+<%= stylesheet_link_tag "theme.css" %>
+
+
+
+<body>
+	
+<nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+<div class='container-fluid'>
+
+<ul class='nav navbar-nav'>
+	<h4 style='color:white;'>Admin Access</h4>		
+</ul>
+</div>
+</nav>
+
+<div class='jumbtron'>
+	<div class='container text-center'>
+
+<br><br><br><br>
+<i><h2>Ticket # <%= @ticket.id %></h2></i>
+<h2>User ID: <%= @ticket.user_id %></h2>
+<p>
+<hr>
+Contact info: <u><%= @ticket.contact %></u>
+<hr>Comment: <%= @ticket.comment %>
+<hr>
+<%= image_tag @ticket.image.url(:large) %><br><br>
+<%= link_to 'Original Size',@ticket.image.url(:original) %>
+<hr>
+<%= link_to '<button class="btn btn-warning">Edit</button>'.html_safe, edit_ticket_path %>
+
+<%= link_to '<button class="btn btn-info">Back to  Unresolved Tickets</button>'.html_safe, tickets_path %>
+
+<%= link_to '<button class="btn btn-danger">Delete</button>'.html_safe, ticket_path(), 
+method: :delete, data:{confirm:'Are you sure?'} %>
+</p>
+</div></div>
+
+</body>
+
+
+
+

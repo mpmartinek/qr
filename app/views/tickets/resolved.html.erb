@@ -1,0 +1,60 @@
+<%= stylesheet_link_tag "main_style.css" %>
+<%= stylesheet_link_tag "theme.css" %>
+<script src="javascripts/jquery-2.1.1.min.js"></script>
+<script src="javascripts/bootstrap.min.js"></script>
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+				<div class="container-fluid">
+					<div class="navbar-header">			
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=" #navbar-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>	
+<h4 style='color:white;'>QuickResponse || Admin Access || <%=link_to 'Unresolved Tickets', tickets_path%></h4>
+	
+					</div><!-- Navbar Header -->
+					
+				</div>
+			</nav>
+<br><br><br>
+			
+				<div class="container text-center">
+				<h1><u><b>Resolved Tickets</h1></b></u>
+
+				</div><!-- End container -->
+
+<body>
+	
+
+
+<div class='jumbtron'>
+	<div class='container text-center'>
+
+
+
+<hr style="border-top: double 4px;color:green" />
+
+
+
+
+<p>
+<% @tickets.each do |ticket| %>
+
+	<h4><%= link_to "Ticket ##{ticket.id}",ticket %></h4>
+	<p>User ID: <%= ticket.user_id %></p>
+	<i><small>Created: <%= ticket.created_at.strftime("%b %d. %Y, %l:%M:%S") %></small><br>
+	<small>Last Updated: <%= ticket.updated_at.strftime("%b %d. %Y, %l:%M:%S"	) %></small></i>
+	<hr>
+<% end %>	
+
+</p>
+	</div>
+</div>
+<br><br>
+
+</body>
+
+

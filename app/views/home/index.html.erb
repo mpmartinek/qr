@@ -1,0 +1,92 @@
+    <head>
+    <title>Quick Responese System</title>
+    <meta charset="utf-8">
+    <style>
+    body    {font-family: Arial, Verdana, sans-serif;
+            background-color: antiquewhite;
+    background-size:cover;}
+    h3 {border-top: 2px solid black; border-bottom: 2px solid black;
+        padding: 20px 0; font-size: 2.3em; font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+        letter-spacing:0.5em; text-align: center;
+    background-size: cover;
+    }
+
+    nav {text-align:center;word-spacing:30px;
+        background-color:#91a8d2; padding:2px;
+        border-radius:6px;}
+
+    #container { margin:auto;
+                 padding: 0 10px 10px;
+
+                }
+        
+    #content {float:left; padding-left: 20px}
+        
+    #content1 {float:right; width: 1000px;}    
+
+        
+    h2 { color: #000033; 
+         font-family: arial, sans-serif;
+    }
+
+
+
+    summary {font-size:25px; margin-bottom:10px; color: black}
+        
+    p {margin-left: 25px}
+
+    footer { font-size: .80em;
+              font-style: italic;
+    }
+
+    </style>
+
+
+    </head>
+        
+    <body>
+        
+    <div id="container">
+        
+    <header>
+    <h3>Quick Response
+    
+    </h3>
+    </header>
+
+    <div align='center'>
+
+        <details>
+            <summary> My computer is slow</summary>
+            <p > Step 1: Check to see if </p>
+        </details>
+        <details>
+            <summary> My computer is frozen</summary>
+            <p>If your</p>
+        </details>
+        <details>
+            <summary> Blue Screen of Death</summary>
+            <p>If your</p>
+        </details>
+            <details>
+            <summary> My printer is not connected to computer</summary>
+            <p>Step 1:</p>
+        </details>
+            <details>
+            <summary> Cannot connect to network</summary>
+            <p>If your</p>
+        </details>
+     
+
+     <p>
+
+<%= button_to 'New Ticket', new_ticket_path, :class => "button", :method => :get %> 
+	</p>
+
+    </form>
+    </div>
+    </div>
+    </div>
+    </body>
+
+
