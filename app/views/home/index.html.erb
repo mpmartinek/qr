@@ -1,44 +1,65 @@
-    <head>
+ <head>
     <title>Quick Responese System</title>
     <meta charset="utf-8">
     <style>
-    body    {font-family: Arial, Verdana, sans-serif;
-            background-color: antiquewhite;
-    background-size:cover;}
-    h3 {border-top: 2px solid black; border-bottom: 2px solid black;
+        
+    html { 
+        background: url(images/med-back1.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        }
+    body    {
+             font-family: Arial, Verdana, sans-serif;
+            }
+        
+    h1 { 
+        border-bottom: 2px solid black; margin-left: 20px; margin-right: 20px; margin-top: 10px;
         padding: 20px 0; font-size: 2.3em; font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
-        letter-spacing:0.5em; text-align: center;
-    background-size: cover;
-    }
+        letter-spacing:0.5em; text-align: center; font-weight:bolder;
+        background-size: cover;
+        }
 
     nav {text-align:center;word-spacing:30px;
         background-color:#91a8d2; padding:2px;
         border-radius:6px;}
 
-    #container { margin:auto;
-                 padding: 0 10px 10px;
-
+    #container { margin: 50px auto;
+                width: 60%;
+                min-width: 960px; max-width: 1200px;
+                background-color: rgba(178, 196, 211, 0.79);
+                color: #000066;
+                box-shadow: 10px 10px 100px 20px rgba(64, 60, 60, 0.69);
+                border-radius: 20px;
+        
                 }
         
     #content {float:left; padding-left: 20px}
         
     #content1 {float:right; width: 1000px;}    
+        
 
         
-    h2 { color: #000033; 
+    h3 { 
+        color: #000033; 
          font-family: arial, sans-serif;
     }
 
 
 
-    summary {font-size:25px; margin-bottom:10px; color: black}
+    summary {
+            font-size:25px; margin-bottom:35px; color: black; margin-left: 60px;
+            }
         
-    p {margin-left: 25px}
+    p {margin-left: 120px; margin-bottom:30px;color:black;}
 
-    footer { font-size: .80em;
+    footer { 
+            font-size: .80em;
               font-style: italic;
-    }
-
+            }
+        
     </style>
 
 
@@ -49,12 +70,12 @@
     <div id="container">
         
     <header>
-    <h3>Quick Response
+    <h1>Quick Response
     
-    </h3>
+    </h1>
     </header>
 
-    <div align='center'>
+    <div>
 
         <details>
             <summary> My computer is slow</summary>
@@ -76,17 +97,12 @@
             <summary> Cannot connect to network</summary>
             <p>If your</p>
         </details>
-     
 
-     <p>
+     <div style='text-align:center'>
+<%= button_to 'New Ticket', new_ticket_path, :class => "button", :method => :get %>
+<br><br>    
+</div>
 
-<%= button_to 'New Ticket', new_ticket_path, :class => "button", :method => :get %> 
-	</p>
-
-    </form>
-    </div>
     </div>
     </div>
     </body>
-
-

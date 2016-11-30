@@ -1,4 +1,4 @@
-<%= stylesheet_link_tag "main_style.css" %>
+<%= stylesheet_link_tag "main_style.css" %>:
 <%= stylesheet_link_tag "theme.css" %>
 
 <style type="text/css">
@@ -14,7 +14,8 @@
 <div class='container-fluid'>
 
 <ul class='nav navbar-nav'>
-    <h4 style='color:white;'>Admin Access</h4>      
+<h4 style='color:white;padding-top:6px'>QuickResponse || Admin Access || <%if@ticket.resolved==false%><%=link_to 'Unresolved Tickets', tickets_path%><%end%><%if@ticket.resolved==true	%><%=link_to 'Resolved Tickets', tickets_resolved_path%><%end%></h4>
+
 </ul>
 </div>
 </nav>
