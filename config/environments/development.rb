@@ -58,8 +58,8 @@ config.action_mailer.smtp_settings = {
   address:              'smtp.gmail.com',
   port:                 587,
   domain:               'gmail.com',
-  user_name:            'marek.martinek11@gmail.com',
-  password:             'endorsgame9',
+  user_name:            'quickresponse1239@gmail.com',
+  password:             'respondtome',
   authentication:       :plain,
   enable_starttls_auto: true
 }
